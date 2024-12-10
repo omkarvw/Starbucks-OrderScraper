@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Starbucks.in Order Scraper",
+    "version": "1.0",
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

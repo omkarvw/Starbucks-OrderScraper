@@ -5,7 +5,7 @@ This Chrome extension allows users to track their Starbucks orders directly from
 # Files and Functions
 ## background.js
 
-### Purpose: The background script serves as the service worker for the extension. It handles communication between the popup and the API to fetch order data.
+ Purpose: The background script serves as the service worker for the extension. It handles communication between the popup and the API to fetch order data.
 
 ## Key Functions:
 

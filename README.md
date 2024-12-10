@@ -1,15 +1,15 @@
-### Starbucks Order Tracker Chrome Extension
+# Starbucks Order Tracker Chrome Extension
 ## Overview
 This Chrome extension allows users to track their Starbucks orders directly from the browser popup. It provides detailed order statistics such as total orders, completed orders, refunded orders, and the total amount spent. The data is fetched from Starbucks' API and displayed in a user-friendly format.
 
-### Files and Functions
+# Files and Functions
 ## background.js
 
-## Purpose: The background script serves as the service worker for the extension. It handles communication between the popup and the API to fetch order data.
+### Purpose: The background script serves as the service worker for the extension. It handles communication between the popup and the API to fetch order data.
 
 ## Key Functions:
 
-# fetchOrders(access_token, deviceId):
+### fetchOrders(access_token, deviceId):
 
 - Purpose: Sends a GET request to the Starbucks API to retrieve order history.
 - Parameters:
@@ -23,7 +23,7 @@ This Chrome extension allows users to track their Starbucks orders directly from
     - Parses the response as JSON to extract order data.
     - Maps through the transaction list to extract relevant order details (ID, date, total amount, status, and items).
     - Returns the processed data.
-# Message Listener (chrome.runtime.onMessage.addListener):
+### Message Listener (chrome.runtime.onMessage.addListener):
 
 - Purpose: Listens for messages from the popup script.
 - Messages: The background script listens for a GET_ORDERS message.
@@ -38,7 +38,7 @@ This Chrome extension allows users to track their Starbucks orders directly from
 
 ## Key Functions:
 
-# Button Event Listener (document.getElementById("fetch-orders").addEventListener("click")):
+### Button Event Listener (document.getElementById("fetch-orders").addEventListener("click")):
 
 - Purpose: To initiate the order fetch process when the user clicks the button.
 - Process:
@@ -49,7 +49,7 @@ This Chrome extension allows users to track their Starbucks orders directly from
     - If the response does not contain orders, it displays an error message.
     - Otherwise, it calculates and displays the order statistics and order details.
 
-# calculateAndDisplayStats(orders):
+### calculateAndDisplayStats(orders):
 
 - Purpose: To calculate the order statistics and display them in the popup.
 - Parameters:
@@ -62,7 +62,7 @@ This Chrome extension allows users to track their Starbucks orders directly from
     - totalRefundedOrders: Count of refunded orders.
     - Loops through the order list to update totals.
     - Displays the calculated statistics in the popup.
-# displayOrders(orders):
+### displayOrders(orders):
 
 - Purpose: To display individual order details in the popup.
 - Parameters:
@@ -73,7 +73,7 @@ This Chrome extension allows users to track their Starbucks orders directly from
     - For each order, creates a new card element.
     - Populates the card with order details (ID, date, total amount, status, and items).
     - Appends the card to the orders-container.
-# displayError(message):
+### displayError(message):
 
 - Purpose: To display an error message in the popup.
 - Parameters:

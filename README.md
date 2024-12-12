@@ -34,7 +34,7 @@ This Chrome extension allows users to track their Starbucks orders directly from
       
 ## popup.js
 
-## Purpose: This script runs in the browser extension popup. It manages the interaction between the user and the fetched order data.
+Purpose: This script runs in the browser extension popup. It manages the interaction between the user and the fetched order data.
 
 ## Key Functions:
 
